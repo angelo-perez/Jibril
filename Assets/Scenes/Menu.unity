@@ -584,8 +584,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1293832684}
-        m_TargetAssemblyTypeName: Start, Assembly-CSharp
-        m_MethodName: StartButton
+        m_TargetAssemblyTypeName: ToSinglePlayerScene, Assembly-CSharp
+        m_MethodName: StartSingle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5706,8 +5706,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1866223568}
-        m_TargetAssemblyTypeName: Start, Assembly-CSharp
-        m_MethodName: StartButton
+        m_TargetAssemblyTypeName: ToMultiplayerScene, Assembly-CSharp
+        m_MethodName: StartMulti
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10054,7 +10054,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1866223566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dfb4231fc92d624b9f22b9fbe58eb0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2b67d48bf131e6741949e8304ba9ce52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1873767099
