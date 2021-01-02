@@ -14,15 +14,21 @@ namespace WordCheck
         public GameObject inputField;
         public GameObject outputField;
         public GameObject gameOver;
+        public GameObject yesButton;
+        public GameObject noButton;
+        public GameObject bgGameOver;
         public GameObject scoreObject;
         public GameObject timeObject;
-        
+
         void Start()
         {
             referenceWord = WordManager.GetRandomWord(); // gets random word
             outputField.GetComponent<Text>().text = referenceWord;
             WordManager.RemoveWord(referenceWord);
             currentTime = startingTime;
+            yesButton.SetActive(false);
+            noButton.SetActive(false);
+            bgGameOver.SetActive(false);
         }
 
         public void StoreWord()
@@ -43,8 +49,12 @@ namespace WordCheck
             }
             else
             {
-                gameOver.GetComponent<Text>().text = "GAME OVER";
+                gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
+                
                 currentTime = 0;
+                yesButton.SetActive(true);
+                noButton.SetActive(true);
+                bgGameOver.SetActive(true);
             }
         }
 
@@ -56,8 +66,15 @@ namespace WordCheck
             if (currentTime <= 0)
             {
                 currentTime = 0;
-                gameOver.GetComponent<Text>().text = "GAME OVER";
+                gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
+                yesButton.SetActive(true);
+                noButton.SetActive(true);
+                bgGameOver.SetActive(true);
+                
             }
+
+
+
         }
 
 

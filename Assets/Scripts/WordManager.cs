@@ -10,7 +10,7 @@ namespace ForSinglePlayer
         public static List<string> wordList; //declaration of a variable
         public static List<string> ReadTextFile()
         {
-            wordList = File.ReadAllLines("Words.txt").ToList(); //reads and create list of words based on the items in text file
+            wordList = File.ReadAllLines("EnglishWords84095.txt").ToList(); //reads and create list of words based on the items in text file
                 
             return wordList; 
         }

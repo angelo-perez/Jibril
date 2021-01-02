@@ -9,4 +9,8 @@ public class ToSinglePlayerScene : MonoBehaviour
     {
         SceneManager.LoadScene("SinglePlayerScene");
     }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
