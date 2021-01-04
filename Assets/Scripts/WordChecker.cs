@@ -38,7 +38,16 @@ namespace WordCheck
         }
         public void CheckWord()
         {
-            if (referenceWord[referenceWord.Length - 1] == inputWord[0] //index: referenceWord.Length - 1
+            if (inputWord == "")
+            {
+                gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
+
+                currentTime = 0;
+                yesButton.SetActive(true);
+                noButton.SetActive(true);
+                bgGameOver.SetActive(true);
+            }
+            else if (referenceWord[referenceWord.Length - 1] == inputWord[0] //index: referenceWord.Length - 1
                 && WordManager.wordList.Contains(inputWord))
             {
                 WordManager.RemoveWord(inputWord); //remove the input word to avoid repetition
