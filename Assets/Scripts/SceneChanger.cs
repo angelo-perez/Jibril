@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -22,5 +22,9 @@ public class SceneChanger : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }

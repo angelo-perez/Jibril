@@ -1,6 +1,8 @@
 ﻿using ForSinglePlayer;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 namespace WordCheck
 {
@@ -13,12 +15,17 @@ namespace WordCheck
         public float startingTime;
         public GameObject inputField;
         public GameObject outputField;
-        public GameObject gameOver;
-        public GameObject yesButton;
-        public GameObject noButton;
-        public GameObject bgGameOver;
+
+
         public GameObject scoreObject;
         public GameObject timeObject;
+        public InputField input; 
+
+        void Awake()
+        {
+            input = GameObject.Find("inputField").GetComponent<InputField>();
+        }
+
 
         void Start()
         {
@@ -26,14 +33,19 @@ namespace WordCheck
             outputField.GetComponent<Text>().text = referenceWord;
             WordManager.RemoveWord(referenceWord);
             currentTime = startingTime;
+            score = 0;
+
+            /*
             yesButton.SetActive(false);
             noButton.SetActive(false);
             bgGameOver.SetActive(false);
+            */
         }
 
         public void StoreWord()
         {
             inputWord = (inputField.GetComponent<Text>().text).ToLower(); // add ToLower later 
+            input.text = "";
             currentTime = startingTime;
         }
         public void CheckWord()
@@ -44,17 +56,22 @@ namespace WordCheck
                 WordManager.RemoveWord(inputWord); //remove the input word to avoid repetition
                 referenceWord = inputWord; //makes the input word to be the reference word
                 outputField.GetComponent<Text>().text = referenceWord;
-                score += 5;
+                score += inputWord.Length;
                 scoreObject.GetComponent<Text>().text = score.ToString();
             }
             else
             {
+                /*
                 gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
                 
                 currentTime = 0;
                 yesButton.SetActive(true);
                 noButton.SetActive(true);
                 bgGameOver.SetActive(true);
+                */
+                
+                PlayerPrefs.SetInt("score", score);
+                SceneManager.LoadScene("GameOver");
             }
         }
 
@@ -65,17 +82,23 @@ namespace WordCheck
 
             if (currentTime <= 0)
             {
+                /*
                 currentTime = 0;
                 gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
                 yesButton.SetActive(true);
                 noButton.SetActive(true);
                 bgGameOver.SetActive(true);
+                */
+                
+                PlayerPrefs.SetInt("score", score);
+                SceneManager.LoadScene("GameOver");
                 
             }
 
 
 
         }
+
 
 
 
