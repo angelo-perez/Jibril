@@ -52,12 +52,8 @@ namespace WordCheck
         {
             if (inputWord == "")
             {
-                gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
-
-                currentTime = 0;
-                yesButton.SetActive(true);
-                noButton.SetActive(true);
-                bgGameOver.SetActive(true);
+                PlayerPrefs.SetInt("score", score);
+                SceneManager.LoadScene("GameOver");
             }
             else if (referenceWord[referenceWord.Length - 1] == inputWord[0] //index: referenceWord.Length - 1
                 && WordManager.wordList.Contains(inputWord))
