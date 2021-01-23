@@ -17,7 +17,7 @@ public class HighScore : MonoBehaviour
     public GameObject noButton;
     public GameObject bgGameOver;
     
-
+/*
     void Start()
     {
         
@@ -35,5 +35,25 @@ public class HighScore : MonoBehaviour
             highScore2.text = "H I G H S C O R E: "   + PlayerPrefs.GetInt("highscore");
         }
     }
+*/
+    void Update()
+    {
+        currentScore1 = PlayerPrefs.GetInt("score");
+        scoreText.text = "S C O R E:" + PlayerPrefs.GetInt("score");
+        
+        gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
+        if(currentScore1 > PlayerPrefs.GetInt("highscore"))
+        {
+            PlayerPrefs.SetInt("highscore", currentScore1);
+            highScore2.text = "H I G H S C O R E: "   + PlayerPrefs.GetInt("highscore");
+        }
+        else
+        {
+            highScore2.text = "H I G H S C O R E: "   + PlayerPrefs.GetInt("highscore");
+        }
+    }
+
+
+
 
 }
