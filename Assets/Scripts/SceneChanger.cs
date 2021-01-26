@@ -16,7 +16,7 @@ public class SceneChanger : MonoBehaviour
     }
     public void StartMulti()
     {
-        SceneManager.LoadScene("MultiplayerScene");
+        SceneManager.LoadScene("VersusScene");
     }
     public void QuitButton()
     {
