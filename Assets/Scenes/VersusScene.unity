@@ -1303,7 +1303,7 @@ MonoBehaviour:
   scoreP2: 0
   counter: 1
   startingTime2: 10
-  startingTime1: 5
+  startingTime1: 60
   timerText1: {fileID: 817828709}
   timerText2: {fileID: 911492402}
   inputField: {fileID: 52118087}
@@ -2392,8 +2392,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.3, y: 46.4}
-  m_SizeDelta: {x: 290.41708, y: 508.68124}
+  m_AnchoredPosition: {x: -26.2, y: 43.9}
+  m_SizeDelta: {x: 287.1738, y: 512.2783}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1408464310
 MonoBehaviour:
@@ -2722,10 +2722,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 285, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -3413,7 +3413,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 0.9884219, b: 0.504717, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}

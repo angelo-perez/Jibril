@@ -130,7 +130,8 @@ namespace WordCheck
             float seconds = (time % 60); 
             string secString = seconds.ToString("F2");
 
-            timerText.text = minutes +":" + secString;
+            timerText.text = secString;
+            //timerText.text = minutes + ":" + secString;
         }
 
 
