@@ -25,8 +25,8 @@ namespace _Checker
         public int counter;
         bool isPaused1 = false;
         bool isPaused2 = false;
-        [SerializeField] public float startingTime2 = 10f;
-        [SerializeField] public float startingTime1 = 5f; //For IEnumrator Timer
+        [SerializeField] public float startingTime2;
+        [SerializeField] public float startingTime1; //For IEnumrator Timer
         [SerializeField] Text timerText1;
         [SerializeField] Text timerText2;
         public GameObject inputField;
@@ -46,7 +46,7 @@ namespace _Checker
         public GameObject gameOver;
         public GameObject gameOverBG;
         InputField input;
-        
+        public float number;
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
@@ -55,6 +55,9 @@ namespace _Checker
 
         void Start()
         {
+            startingTime1 = PlayerPrefs.GetFloat("time1");
+            startingTime2 = PlayerPrefs.GetFloat("time2");
+            number = PlayerPrefs.GetFloat("time2");
             playerIndicator.GetComponent<Text>().text = "Player 1";
             referenceWord = VersusWordManager.GetRandomWord(); // gets random word
             outputField.GetComponent<Text>().text = referenceWord;
@@ -72,6 +75,7 @@ namespace _Checker
             gameOver.SetActive(false);
             gameOverBG.SetActive(false);
             counter++;
+
         }
 
         public void StoreWord()
