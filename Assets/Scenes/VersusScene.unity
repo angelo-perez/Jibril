@@ -1665,7 +1665,7 @@ MonoBehaviour:
   quitButton: {fileID: 1949679479}
   congrats: {fileID: 1115257916}
   gameOver: {fileID: 208007080}
-  gameOverBG: {fileID: 0}
+  gameOverBG: {fileID: 1363184060}
   number: 0
 --- !u!4 &928409130
 Transform:
