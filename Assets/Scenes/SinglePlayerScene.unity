@@ -932,6 +932,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -956,10 +957,10 @@ AudioSource:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2c4c16ddcedc23e439510779538b7161, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 67e98129411c8cd419baa96fc517781f, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1e5fb1dfbf5e41648a16bb46922e7318, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.297
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1101,6 +1102,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df82964b8a3024fbb61eb564bdf34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 2c4c16ddcedc23e439510779538b7161, type: 2}
+  sfx: {fileID: 24100000, guid: 67e98129411c8cd419baa96fc517781f, type: 2}
+  number: 0
+  number2: 0
+  number3: 0
+  number4: 0
 --- !u!1 &564758312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,6 +1229,7 @@ GameObject:
   - component: {fileID: 666291126}
   - component: {fileID: 666291125}
   - component: {fileID: 666291124}
+  - component: {fileID: 666291127}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1265,6 +1285,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666291127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666291123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04df82964b8a3024fbb61eb564bdf34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 2c4c16ddcedc23e439510779538b7161, type: 2}
+  sfx: {fileID: 24100000, guid: 67e98129411c8cd419baa96fc517781f, type: 2}
+  number: 0
+  number2: 0
+  number3: 0
+  number4: 0
 --- !u!1 &816161699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1507,7 @@ MonoBehaviour:
   scoreObject: {fileID: 1708055181}
   audio: {fileID: 1035547495}
   input: {fileID: 0}
+  timers: 10
 --- !u!4 &928409130
 Transform:
   m_ObjectHideFlags: 0
@@ -1681,7 +1720,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035547495}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e5fb1dfbf5e41648a16bb46922e7318, type: 3}
@@ -2290,7 +2329,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573015386}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04df82964b8a3024fbb61eb564bdf34e, type: 3}
   m_Name: 
@@ -2299,6 +2338,8 @@ MonoBehaviour:
   sfx: {fileID: 24100000, guid: 67e98129411c8cd419baa96fc517781f, type: 2}
   number: 0
   number2: 0
+  number3: 0
+  number4: 0
 --- !u!1 &1601004617
 GameObject:
   m_ObjectHideFlags: 0
@@ -2790,7 +2831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2143293414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,7 +2921,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143293413}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04df82964b8a3024fbb61eb564bdf34e, type: 3}
   m_Name: 
@@ -2889,6 +2930,8 @@ MonoBehaviour:
   sfx: {fileID: 24100000, guid: 67e98129411c8cd419baa96fc517781f, type: 2}
   number: 0
   number2: 0
+  number3: 0
+  number4: 0
 --- !u!222 &2418191099139860888
 CanvasRenderer:
   m_ObjectHideFlags: 0

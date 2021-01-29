@@ -13,13 +13,35 @@ public class MenuScript : MonoBehaviour
     public AudioMixer sfx;
     public float number;
     public float number2;
+    public float number3;
+    public float number4;
+
+
+
+    void Start()
+    {
+        number4 = PlayerPrefs.GetFloat("volume2");
+        number3 = PlayerPrefs.GetFloat("volume1");
+        audioMixer.SetFloat("volume", number3);
+        sfx.SetFloat("vol", number4);
+    }
+
+
+
+
+
+
     public void SetVolume (float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        number3 = volume;
+        PlayerPrefs.SetFloat("volume1", number3);
     }
     public void Setsfx (float volume)
     {
         sfx.SetFloat("vol", volume);
+        number4 = volume;
+        PlayerPrefs.SetFloat("volume2", number4);
     }
     public void timer1(int val)
     {
@@ -64,13 +86,6 @@ public class MenuScript : MonoBehaviour
         }
 
     }
-    /*
-    void Update()
-    {
-        PlayerPrefs.SetFloat("time1",number);
-        PlayerPrefs.SetFloat("time2",number2);
-    }
-    */
 
 
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using ForSinglePlayer;
 using UnityEngine;
@@ -15,7 +15,7 @@ namespace WordCheck
         public string referenceWord;
         public int score;
         public float currentTime;
-        public float startingTime;
+        public float startingTime = 10f;
 
         [SerializeField] float timer = 10f;
         [SerializeField] TextMeshProUGUI timerText;
@@ -30,7 +30,7 @@ namespace WordCheck
         public GameObject scoreObject;
         public GameObject audio;
         public InputField input; 
-
+        public float timers = 10f;
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
@@ -47,11 +47,6 @@ namespace WordCheck
             PlayerPrefs.SetInt("score", 0);
             score = 0;
             gameOver.SetActive(false);
-            /*
-            yesButton.SetActive(false);
-            noButton.SetActive(false);
-            bgGameOver.SetActive(false);
-            */
             audio.SetActive(true);
         }
 
@@ -60,7 +55,6 @@ namespace WordCheck
             inputWord = (inputField.GetComponent<Text>().text).ToLower(); // add ToLower later 
             input.text = "";
             currentTime = startingTime;
-            
         }
         public void CheckWord()
         {
@@ -77,6 +71,7 @@ namespace WordCheck
                 score += inputWord.Length;
                 scoreObject.GetComponent<Text>().text = score.ToString();
                 PlayerPrefs.SetInt("score", score);
+                StartCoroutine(CountdownBegins());
             }
             else
             {
@@ -97,20 +92,12 @@ namespace WordCheck
         }
         void GameEnder()
         {
-            /*
-            currentTime = 0;
-            gameOver.GetComponent<Text>().text = "GAME OVER\nWould You like to try again?";
-            yesButton.SetActive(true);
-            noButton.SetActive(true);
-            bgGameOver.SetActive(true);
-                
-            SceneManager.LoadScene("GameOver");
-            */
             PlayerPrefs.SetInt("score", score);
             currentTime = 0;
             gameOver.SetActive(true);
             audio.SetActive(false);
             timerText.text = "0:00";
+        
         }
         
         IEnumerator CountdownBegins()
