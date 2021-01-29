@@ -44,17 +44,17 @@ public class MenuScript : MonoBehaviour
     {
         if (val == 0)
         {
-            PlayerPrefs.SetFloat("time2", 3f);
+            PlayerPrefs.SetFloat("time2", 5f);
             number2 = PlayerPrefs.GetFloat("time2");
         }
         if (val == 1)
         {
-            PlayerPrefs.SetFloat("time2", 5f);
+            PlayerPrefs.SetFloat("time2", 10f);
             number2 = PlayerPrefs.GetFloat("time2");
         }
         if (val == 2)
         {
-            PlayerPrefs.SetFloat("time2", 10f);
+            PlayerPrefs.SetFloat("time2", 15f);
             number2 = PlayerPrefs.GetFloat("time2");
         }
         if (val == 3)
@@ -64,12 +64,13 @@ public class MenuScript : MonoBehaviour
         }
 
     }
+    /*
     void Update()
     {
         PlayerPrefs.SetFloat("time1",number);
         PlayerPrefs.SetFloat("time2",number2);
     }
-
+    */
 
 
 }
