@@ -14,12 +14,13 @@ namespace WordCheck
         public string inputWord;
         public string referenceWord;
         public int score;
-        public float currentTime;
-        public float startingTime = 10f;
+        
 
-        [SerializeField] float timer = 10f;
+        [SerializeField] float startingTime = 10f;
         [SerializeField] TextMeshProUGUI timerText;
-        float time = 0f;
+        float timer;
+        float seconds;
+        float miliseconds;
 
 
         public GameObject inputField;
@@ -30,7 +31,6 @@ namespace WordCheck
         public GameObject scoreObject;
         public GameObject audio;
         public InputField input; 
-        public float timers = 10f;
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
@@ -42,19 +42,19 @@ namespace WordCheck
             referenceWord = WordManager.GetRandomWord(); // gets random word
             outputField.GetComponent<Text>().text = referenceWord;
             WordManager.RemoveWord(referenceWord);
-            StartCoroutine(CountdownBegins());
-            currentTime = startingTime;
+            StartCoroutine(Timer());
             PlayerPrefs.SetInt("score", 0);
             score = 0;
             gameOver.SetActive(false);
             audio.SetActive(true);
+            
         }
 
         public void StoreWord()
         {
             inputWord = (inputField.GetComponent<Text>().text).ToLower(); // add ToLower later 
             input.text = "";
-            currentTime = startingTime;
+            timer = startingTime;
         }
         public void CheckWord()
         {
@@ -71,7 +71,7 @@ namespace WordCheck
                 score += inputWord.Length;
                 scoreObject.GetComponent<Text>().text = score.ToString();
                 PlayerPrefs.SetInt("score", score);
-                StartCoroutine(CountdownBegins());
+                
             }
             else
             {
@@ -79,47 +79,33 @@ namespace WordCheck
             }
         }
 
-        void Update() //for time
-        {
-            currentTime -= 1 * Time.deltaTime;
-            if (currentTime <= 0)
-            {
-                GameEnder();
-            }
-
-
-
-        }
+        
         void GameEnder()
         {
             PlayerPrefs.SetInt("score", score);
-            currentTime = 0;
             gameOver.SetActive(true);
             audio.SetActive(false);
-            timerText.text = "0:00";
-        
+            
         }
         
-        IEnumerator CountdownBegins()
+        IEnumerator Timer()
         {
-            time = timer;
+            timer = startingTime;
             do
             {
-                time -= Time.deltaTime;
-                FormatText();
+                timer -= Time.deltaTime;
+                miliseconds = (int)((timer - (int)timer) * 100);
+                seconds = (timer % 60);
+                if (timer <= 0)
+                {
+                    GameEnder();
+                }
+                timerText.text = string.Format("{0:00}:{1:00}", seconds, miliseconds);
                 yield return null;
-            } while (time > 0);
+            } while (timer > 0);
 
         }
-        void FormatText()
-        {
-            int minutes = (int)(time/60) % 60;
-            float seconds = (time % 60); 
-            string secString = seconds.ToString("F2");
-
-            timerText.text = secString;
-            //timerText.text = minutes + ":" + secString;
-        }
+       
 
 
 

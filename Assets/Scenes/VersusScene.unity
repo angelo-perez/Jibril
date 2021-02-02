@@ -1242,7 +1242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -18}
+  m_AnchoredPosition: {x: -27, y: -27}
   m_SizeDelta: {x: 158.90521, y: 47.516083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &600714184
@@ -1719,7 +1719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: 44}
+  m_AnchoredPosition: {x: -27, y: 30}
   m_SizeDelta: {x: 158.90521, y: 47.516083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &950301842
@@ -2712,8 +2712,9 @@ GameObject:
   - component: {fileID: 1363184061}
   - component: {fileID: 1363184063}
   - component: {fileID: 1363184062}
+  - component: {fileID: 1363184064}
   m_Layer: 0
-  m_Name: Image
+  m_Name: GameOverBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2776,6 +2777,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363184060}
   m_CullTransparentMesh: 0
+--- !u!223 &1363184064
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363184060}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &1387994240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3260,7 +3282,7 @@ GameObject:
   - component: {fileID: 1691446798}
   - component: {fileID: 1691446797}
   m_Layer: 5
-  m_Name: Image
+  m_Name: InGameBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3598,7 +3620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -80}
+  m_AnchoredPosition: {x: -27, y: -84}
   m_SizeDelta: {x: 158.90521, y: 47.516083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1949679481

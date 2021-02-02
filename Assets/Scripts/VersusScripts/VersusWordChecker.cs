@@ -242,6 +242,7 @@ namespace _Checker
         }
         public void Continue()
         {
+            input.text = "";
             isPaused1 = false;
             isPaused2 = false;
             continueButton.SetActive(false);
