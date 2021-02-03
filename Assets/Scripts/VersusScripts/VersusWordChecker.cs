@@ -45,6 +45,8 @@ namespace _Checker
         public GameObject congrats;
         public GameObject gameOver;
         public GameObject gameOverBG;
+        public GameObject gameOverMusic;
+        public GameObject MainAudio;
         InputField input;
         public float number;
         void Awake()
@@ -74,6 +76,7 @@ namespace _Checker
             congrats.SetActive(false);
             gameOver.SetActive(false);
             gameOverBG.SetActive(false);
+            gameOverMusic.SetActive(false);
             counter++;
 
         }
@@ -195,6 +198,8 @@ namespace _Checker
             congrats.SetActive(true);
             gameOver.SetActive(true);
             gameOverBG.SetActive(true);
+            gameOverMusic.SetActive(true);
+            MainAudio.SetActive(false);
         }
         IEnumerator Timer2() //timer per turn
         {
@@ -267,6 +272,8 @@ namespace _Checker
             congrats.SetActive(true);
             gameOver.SetActive(true);
             gameOverBG.SetActive(true);
+            gameOverMusic.SetActive(true);
+            MainAudio.SetActive(false);
 
         }
         public void Rematch()

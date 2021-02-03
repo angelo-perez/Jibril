@@ -6,7 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-
 namespace WordCheck
 {
     public class WordChecker : MonoBehaviour
@@ -16,7 +15,7 @@ namespace WordCheck
         public int score;
         
 
-        [SerializeField] float startingTime = 10f;
+        [SerializeField] float startingTime = 9f;
         [SerializeField] TextMeshProUGUI timerText;
         float timer;
         float seconds;
@@ -26,11 +25,13 @@ namespace WordCheck
         public GameObject inputField;
         public GameObject outputField;
         public GameObject gameOver;
-
-
         public GameObject scoreObject;
         public GameObject audio;
+
+
         public InputField input; 
+
+
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
@@ -54,7 +55,7 @@ namespace WordCheck
         {
             inputWord = (inputField.GetComponent<Text>().text).ToLower(); // add ToLower later 
             input.text = "";
-            timer = startingTime;
+            timer = startingTime - 1;
         }
         public void CheckWord()
         {
@@ -90,7 +91,7 @@ namespace WordCheck
         
         IEnumerator Timer()
         {
-            timer = startingTime;
+            timer = startingTime - 1;
             do
             {
                 timer -= Time.deltaTime;
