@@ -46,6 +46,7 @@ namespace _Checker
         public GameObject gameOver;
         public GameObject gameOverBG;
         public GameObject gameOverMusic;
+        public GameObject image;
         public GameObject MainAudio;
         InputField input;
         public float number;
@@ -77,6 +78,7 @@ namespace _Checker
             gameOver.SetActive(false);
             gameOverBG.SetActive(false);
             gameOverMusic.SetActive(false);
+            image.SetActive(false);
             counter++;
 
         }
@@ -199,6 +201,7 @@ namespace _Checker
             gameOver.SetActive(true);
             gameOverBG.SetActive(true);
             gameOverMusic.SetActive(true);
+            image.SetActive(true);
             MainAudio.SetActive(false);
         }
         IEnumerator Timer2() //timer per turn
@@ -273,6 +276,7 @@ namespace _Checker
             gameOver.SetActive(true);
             gameOverBG.SetActive(true);
             gameOverMusic.SetActive(true);
+            image.SetActive(true);
             MainAudio.SetActive(false);
 
         }

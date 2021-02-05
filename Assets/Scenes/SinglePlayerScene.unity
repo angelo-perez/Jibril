@@ -1586,6 +1586,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2143293420}
+        m_TargetAssemblyTypeName: buttencheck, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &106914662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7708,6 +7720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 498238513}
   - component: {fileID: 498238514}
+  - component: {fileID: 498238515}
   m_Layer: 5
   m_Name: GameoverST
   m_TagString: Untagged
@@ -7749,6 +7762,102 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &498238515
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498238512}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 2c4c16ddcedc23e439510779538b7161, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 8873ece2df0c01d4b9e85b48b1952d2b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -16492,6 +16601,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035547497}
   - component: {fileID: 1035547496}
+  - component: {fileID: 1035547498}
   m_Layer: 0
   m_Name: IngameMusic
   m_TagString: Untagged
@@ -16509,7 +16619,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 2c4c16ddcedc23e439510779538b7161, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 1e5fb1dfbf5e41648a16bb46922e7318, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b3e57252667c9f048a05365e9aa33d40, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -16609,6 +16719,14 @@ Transform:
   m_Father: {fileID: 1573015387}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1035547498
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035547495}
+  m_Enabled: 1
 --- !u!1 &1039138978
 GameObject:
   m_ObjectHideFlags: 0
@@ -24190,6 +24308,7 @@ GameObject:
   - component: {fileID: 1573015388}
   - component: {fileID: 1573015391}
   - component: {fileID: 1573015392}
+  - component: {fileID: 1573015393}
   m_Layer: 5
   m_Name: MainGame
   m_TagString: Untagged
@@ -24317,6 +24436,18 @@ MonoBehaviour:
   number2: 0
   number3: 0
   number4: 0
+--- !u!114 &1573015393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573015386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45de3f24f6c3b404aacfea4b33809889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1575192880
 GameObject:
   m_ObjectHideFlags: 0
@@ -34851,6 +34982,9 @@ GameObject:
   - component: {fileID: 2143293415}
   - component: {fileID: 2143293414}
   - component: {fileID: 2143293418}
+  - component: {fileID: 2143293419}
+  - component: {fileID: 2143293420}
+  - component: {fileID: 2143293421}
   m_Layer: 5
   m_Name: 'GameOver '
   m_TagString: Untagged
@@ -34959,6 +35093,41 @@ MonoBehaviour:
   number2: 0
   number3: 0
   number4: 0
+--- !u!114 &2143293419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143293413}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a59cdf78c1b814b8cd59bb365c7409, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
+  checkthis: 0
+  checker: 0
+--- !u!114 &2143293420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143293413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45de3f24f6c3b404aacfea4b33809889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!81 &2143293421
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143293413}
+  m_Enabled: 1
 --- !u!1 &2146495220
 GameObject:
   m_ObjectHideFlags: 0
@@ -35428,6 +35597,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: edfe8714dc4fc8a45acf4bac966de3b1, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2143293420}
+        m_TargetAssemblyTypeName: buttencheck, Assembly-CSharp
+        m_MethodName: onClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
