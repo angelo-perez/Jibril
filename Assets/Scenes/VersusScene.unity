@@ -6267,7 +6267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &411268040
 Transform:
   m_ObjectHideFlags: 0
@@ -15639,15 +15639,10 @@ MonoBehaviour:
   surrenderButton: {fileID: 464103985}
   areYouReady: {fileID: 1238232860}
   pauseBG: {fileID: 1128771272}
-  rematchButton: {fileID: 950301840}
-  mainmenuButton: {fileID: 600714182}
-  quitButton: {fileID: 1949679479}
-  congrats: {fileID: 1115257916}
   gameOver: {fileID: 208007080}
-  gameOverBG: {fileID: 1363184060}
-  gameOverMusic: {fileID: 257310202}
-  image: {fileID: 1363184060}
   MainAudio: {fileID: 1340951996}
+  GameOverCanvas: {fileID: 411268039}
+  PausePerTurn: {fileID: 2010578813}
   number: 0
 --- !u!4 &928409130
 Transform:
@@ -33604,7 +33599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2010578814
 Transform:
   m_ObjectHideFlags: 0

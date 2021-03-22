@@ -35,19 +35,10 @@ namespace _Checker
         public GameObject scoreObjectP2;
         public GameObject playerIndicator;
         //public GameObject inputFieldText;
-        public GameObject continueButton;
-        public GameObject surrenderButton;
-        public GameObject areYouReady;
-        public GameObject pauseBG;
-        public GameObject rematchButton;
-        public GameObject mainmenuButton;
-        public GameObject quitButton;
-        public GameObject congrats;
         public GameObject gameOver;
-        public GameObject gameOverBG;
-        public GameObject gameOverMusic;
-        public GameObject image;
         public GameObject MainAudio;
+        public GameObject GameOverCanvas;
+        public GameObject PausePerTurn;
         InputField input;
         public float number;
         void Awake()
@@ -67,18 +58,6 @@ namespace _Checker
             VersusWordManager.RemoveWord(referenceWord);
             StartCoroutine("Timer1");
             StartCoroutine("Timer2");
-            continueButton.SetActive(false);
-            surrenderButton.SetActive(false);
-            pauseBG.SetActive(false);
-            areYouReady.SetActive(false);
-            rematchButton.SetActive(false);
-            mainmenuButton.SetActive(false);
-            quitButton.SetActive(false);
-            congrats.SetActive(false);
-            gameOver.SetActive(false);
-            gameOverBG.SetActive(false);
-            gameOverMusic.SetActive(false);
-            image.SetActive(false);
             counter++;
 
         }
@@ -89,10 +68,7 @@ namespace _Checker
             input.text = "";
             timer2 = startingTime2;
             counter++;
-            continueButton.SetActive(true);
-            surrenderButton.SetActive(true);
-            pauseBG.SetActive(true);
-            areYouReady.SetActive(true);
+            PausePerTurn.SetActive(true);
             isPaused1 = true;
             isPaused2 = true;
 
@@ -194,14 +170,7 @@ namespace _Checker
             {
                 gameOver.GetComponent<Text>().text = "PLAYER 2 WINS!";
             }
-            rematchButton.SetActive(true);
-            mainmenuButton.SetActive(true);
-            quitButton.SetActive(true);
-            congrats.SetActive(true);
-            gameOver.SetActive(true);
-            gameOverBG.SetActive(true);
-            gameOverMusic.SetActive(true);
-            image.SetActive(true);
+            GameOverCanvas.SetActive(true);
             MainAudio.SetActive(false);
         }
         IEnumerator Timer2() //timer per turn
@@ -216,10 +185,7 @@ namespace _Checker
                 {
                     counter++;
                     timer2 = startingTime2;
-                    continueButton.SetActive(true);
-                    surrenderButton.SetActive(true);
-                    pauseBG.SetActive(true);
-                    areYouReady.SetActive(true);
+                    PausePerTurn.SetActive(true);
                     isPaused1 = true;
                     isPaused2 = true;
                     if (counter % 2 != 0)
@@ -253,10 +219,7 @@ namespace _Checker
             input.text = "";
             isPaused1 = false;
             isPaused2 = false;
-            continueButton.SetActive(false);
-            surrenderButton.SetActive(false);
-            pauseBG.SetActive(false);
-            areYouReady.SetActive(false);
+            PausePerTurn.SetActive(false);
 
         }
         public void Surrender()
@@ -269,14 +232,7 @@ namespace _Checker
             {
                 gameOver.GetComponent<Text>().text = "PLAYER 1 WINS!";
             }
-            rematchButton.SetActive(true);
-            mainmenuButton.SetActive(true);
-            quitButton.SetActive(true);
-            congrats.SetActive(true);
-            gameOver.SetActive(true);
-            gameOverBG.SetActive(true);
-            gameOverMusic.SetActive(true);
-            image.SetActive(true);
+            GameOverCanvas.SetActive(true);
             MainAudio.SetActive(false);
 
         }
@@ -292,6 +248,7 @@ namespace _Checker
         {
             Debug.Log("Quit");
             Application.Quit();
+
         }
     }
 }
