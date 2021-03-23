@@ -7433,7 +7433,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player 1
+  m_Text: 
 --- !u!222 &480007338
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15635,10 +15635,6 @@ MonoBehaviour:
   scoreObjectP1: {fileID: 1708055181}
   scoreObjectP2: {fileID: 185578959}
   playerIndicator: {fileID: 480007336}
-  continueButton: {fileID: 1419990684}
-  surrenderButton: {fileID: 464103985}
-  areYouReady: {fileID: 1238232860}
-  pauseBG: {fileID: 1128771272}
   gameOver: {fileID: 208007080}
   MainAudio: {fileID: 1340951996}
   GameOverCanvas: {fileID: 411268039}

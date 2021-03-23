@@ -22,7 +22,7 @@ namespace _Checker
         float timer1;
         public int scoreP1;
         public int scoreP2;
-        public int counter;
+        public int counter = 1;
         bool isPaused1 = false;
         bool isPaused2 = false;
         [SerializeField] public float startingTime2;
