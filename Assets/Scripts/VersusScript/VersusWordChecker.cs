@@ -42,10 +42,13 @@ namespace _Checker
         InputField input;
         public float number;
         public List<string> wordlist;
+        int wordLength = 100; //restriction on the length of the word. 100 means no restriction
+        //Etong wordLength yung need magbago-bago ng values gamit yung sa dropdown
 
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
+            input.characterLimit = wordLength; //limits the number of character in the input field
         }
         
 
@@ -126,24 +129,53 @@ namespace _Checker
             else if (referenceWord[referenceWord.Length - 1] == inputWord[0] //index: referenceWord.Length - 1 
                  && wordlist.Contains(inputWord))                //for valid inputword
             {
-                RemoveWord(inputWord); //remove the input word to avoid repetition
-                referenceWord = inputWord; //makes the input word to be the reference word
-                outputField.GetComponent<Text>().text = referenceWord; //display the new value of reference word
-                if (counter % 2 != 0) //decides whether player 1 or player 2
+                if (wordLength == 100) //for "no restriction" mode
                 {
-                    player = "Player 2";
-                    //playerIndicator.GetComponent<Text>().text = "Player 2"; //indicates the it is the turn of Player 2
-                    scoreP1 += inputWord.Length; //adds the score of Player 2 depending on length of words
-                    scoreObjectP1.GetComponent<Text>().text = scoreP1.ToString(); //display the current score of Player 2 
+                    RemoveWord(inputWord); //remove the input word to avoid repetition
+                    referenceWord = inputWord; //makes the input word to be the reference word
+                    outputField.GetComponent<Text>().text = referenceWord; //display the new value of reference word
+                    if (counter % 2 != 0) //decides whether player 1 or player 2
+                    {
+                        player = "Player 2";
+                        //playerIndicator.GetComponent<Text>().text = "Player 2"; //indicates the it is the turn of Player 2
+                        scoreP1 += inputWord.Length; //adds the score of Player 2 depending on length of words
+                        scoreObjectP1.GetComponent<Text>().text = scoreP1.ToString(); //display the current score of Player 2 
+                    }
+                    else
+                    {
+                        player = "Player 1";
+                        //playerIndicator.GetComponent<Text>().text = "Player 1"; //indicates the it is the turn of Player 1
+                        scoreP2 += inputWord.Length; //adds the score of Player 1 depending on length of words
+                        scoreObjectP2.GetComponent<Text>().text = scoreP2.ToString(); //display the current score of Player 1
+                    }
                 }
-                else
+                else //for "with restriction" mode
                 {
-                    player = "Player 1";
-                    //playerIndicator.GetComponent<Text>().text = "Player 1"; //indicates the it is the turn of Player 1
-                    scoreP2 += inputWord.Length; //adds the score of Player 1 depending on length of words
-                    scoreObjectP2.GetComponent<Text>().text = scoreP2.ToString(); //display the current score of Player 1
+                    if (inputWord.Length == wordLength)
+                    {
+                        RemoveWord(inputWord); //remove the input word to avoid repetition
+                        referenceWord = inputWord; //makes the input word to be the reference word
+                        outputField.GetComponent<Text>().text = referenceWord; //display the new value of reference word
+                        if (counter % 2 != 0) //decides whether player 1 or player 2
+                        {
+                            player = "Player 2";
+                            //playerIndicator.GetComponent<Text>().text = "Player 2"; //indicates the it is the turn of Player 2
+                            scoreP1 += inputWord.Length; //adds the score of Player 2 depending on length of words
+                            scoreObjectP1.GetComponent<Text>().text = scoreP1.ToString(); //display the current score of Player 2 
+                        }
+                        else
+                        {
+                            player = "Player 1";
+                            //playerIndicator.GetComponent<Text>().text = "Player 1"; //indicates the it is the turn of Player 1
+                            scoreP2 += inputWord.Length; //adds the score of Player 1 depending on length of words
+                            scoreObjectP2.GetComponent<Text>().text = scoreP2.ToString(); //display the current score of Player 1
+                        }
+
+                    }
+
                 }
                 playerIndicator.GetComponent<Text>().text = player;
+
 
             }
 
