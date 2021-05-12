@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using ForSinglePlayer;
+using wordList;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -12,25 +12,19 @@ namespace WordCheck
     {
         public string inputWord;
         public string referenceWord;
-        public int score;
-        
-
+        public int score;      
         [SerializeField] float startingTime = 9f;
         [SerializeField] TextMeshProUGUI timerText;
         float timer;
         float seconds;
         float miliseconds;
-
-
         public GameObject inputField;
         public GameObject outputField;
         public GameObject gameOver;
         public GameObject scoreObject;
         public GameObject audio;
-
-
-        public InputField input; 
-
+        public InputField input;
+        public List<string> wordlist;
 
         void Awake()
         {
@@ -40,15 +34,44 @@ namespace WordCheck
 
         void Start()
         {
-            referenceWord = WordManager.GetRandomWord(); // gets random word
+            referenceWord = GetRandomWord(); // gets random word
             outputField.GetComponent<Text>().text = referenceWord;
-            WordManager.RemoveWord(referenceWord);
+            RemoveWord(referenceWord);
             StartCoroutine(Timer());
             PlayerPrefs.SetInt("score", 0);
             score = 0;
-            gameOver.SetActive(false);
+            //gameOver.SetActive(false);
             audio.SetActive(true);
             
+        }
+        /*private void Update()
+        {
+            if (Input.GetKey("return") && gameOver.activeInHierarchy == false)
+            {
+                StoreWord();
+                CheckWord();
+            }
+        }*/
+        public List<string> ReadTextFile()
+        {
+            string[] wordarray = WordsList.listOfWords;
+            wordlist = new List<string>(wordarray);
+
+            return wordlist;
+        }
+
+        public string GetRandomWord()
+        {
+            var random = new System.Random(); //making instance to be able to used certain methods of it
+            var _words = ReadTextFile(); //calls the ReadTextFile method
+            int index = random.Next(_words.Count); //generates a random number based on the item's count in the list
+            string randomWord = _words[index]; //uses the random number as index to produce a random word from the word list
+
+            return randomWord;
+        }
+        public void RemoveWord(string removeWord)
+        {
+            wordlist.Remove(removeWord); //removes a word from the list
         }
 
         public void StoreWord()
@@ -64,9 +87,9 @@ namespace WordCheck
                 GameEnder();
             }
             else if (referenceWord[referenceWord.Length - 1] == inputWord[0] //index: referenceWord.Length - 1
-                && WordManager.wordList.Contains(inputWord))
+                && wordlist.Contains(inputWord))
             {
-                WordManager.RemoveWord(inputWord); //remove the input word to avoid repetition
+                RemoveWord(inputWord); //remove the input word to avoid repetition
                 referenceWord = inputWord; //makes the input word to be the reference word
                 outputField.GetComponent<Text>().text = referenceWord;
                 score += inputWord.Length;
@@ -107,13 +130,5 @@ namespace WordCheck
 
         }
        
-
-
-
-
-
-      
-        
-        
     }
 }

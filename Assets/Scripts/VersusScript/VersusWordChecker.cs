@@ -1,4 +1,4 @@
-﻿using _Manager;
+﻿using wordList;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,6 +41,8 @@ namespace _Checker
         public GameObject PausePerTurn;
         InputField input;
         public float number;
+        public List<string> wordlist;
+
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
@@ -53,13 +55,42 @@ namespace _Checker
             startingTime2 = PlayerPrefs.GetFloat("time2");
             number = PlayerPrefs.GetFloat("time2");
             playerIndicator.GetComponent<Text>().text = "Player 1";
-            referenceWord = VersusWordManager.GetRandomWord(); // gets random word
+            referenceWord = GetRandomWord(); // gets random word
             outputField.GetComponent<Text>().text = referenceWord;
-            VersusWordManager.RemoveWord(referenceWord);
+            RemoveWord(referenceWord);
             StartCoroutine("Timer1");
             StartCoroutine("Timer2");
             counter++;
 
+        }
+        /*private void Update()
+        {
+            if (Input.GetKey("return") && GameOverCanvas.activeInHierarchy == false)
+            {
+                StoreWord();
+                CheckWord();
+            }
+        }*/
+        public List<string> ReadTextFile()
+        {
+            string[] wordarray = WordsList.listOfWords;
+            wordlist = new List<string>(wordarray);
+
+            return wordlist;
+        }
+
+        public string GetRandomWord()
+        {
+            var random = new System.Random(); //making instance to be able to used certain methods of it
+            var _words = ReadTextFile(); //calls the ReadTextFile method
+            int index = random.Next(_words.Count); //generates a random number based on the item's count in the list
+            string randomWord = _words[index]; //uses the random number as index to produce a random word from the word list
+
+            return randomWord;
+        }
+        public void RemoveWord(string removeWord)
+        {
+            wordlist.Remove(removeWord); //removes a word from the list
         }
 
         public void StoreWord()
@@ -93,9 +124,9 @@ namespace _Checker
             }
 
             else if (referenceWord[referenceWord.Length - 1] == inputWord[0] //index: referenceWord.Length - 1 
-                 && VersusWordManager.wordList.Contains(inputWord))                //for valid inputword
+                 && wordlist.Contains(inputWord))                //for valid inputword
             {
-                VersusWordManager.RemoveWord(inputWord); //remove the input word to avoid repetition
+                RemoveWord(inputWord); //remove the input word to avoid repetition
                 referenceWord = inputWord; //makes the input word to be the reference word
                 outputField.GetComponent<Text>().text = referenceWord; //display the new value of reference word
                 if (counter % 2 != 0) //decides whether player 1 or player 2
@@ -250,5 +281,7 @@ namespace _Checker
             Application.Quit();
 
         }
+       
+
     }
 }
