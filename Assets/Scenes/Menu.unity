@@ -2485,6 +2485,7 @@ MonoBehaviour:
   number2: 0
   number3: 0
   number4: 0
+  number5: 0
 --- !u!114 &95684950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2515,6 +2516,7 @@ MonoBehaviour:
   number2: 0
   number3: 0
   number4: 0
+  number5: 0
 --- !u!114 &95684952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16156,7 +16158,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 95684949}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: timer1
+        m_MethodName: wordLength
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29356,7 +29358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1412422287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33748,7 +33750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1620377765
 RectTransform:
   m_ObjectHideFlags: 0

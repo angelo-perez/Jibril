@@ -15,6 +15,7 @@ public class MenuScript : MonoBehaviour
     public float number2;
     public float number3;
     public float number4;
+    public float number5;
 
 
 
@@ -83,6 +84,30 @@ public class MenuScript : MonoBehaviour
         {
             PlayerPrefs.SetFloat("time2", 20f);
             number2 = PlayerPrefs.GetFloat("time2");
+        }
+
+    }
+    public void wordLength(int val)
+    {
+        if (val == 0)
+        {
+            PlayerPrefs.SetFloat("wordL", 4f);
+            number5 = PlayerPrefs.GetFloat("wordL");
+        }
+        if (val == 1)
+        {
+            PlayerPrefs.SetFloat("wordL", 5f);
+            number5 = PlayerPrefs.GetFloat("wordL");
+        }
+        if (val == 2)
+        {
+            PlayerPrefs.SetFloat("wordL", 6f);
+            number5 = PlayerPrefs.GetFloat("wordL");
+        }
+        if (val == 3)
+        {
+            PlayerPrefs.SetFloat("wordL", 7f);
+            number5 = PlayerPrefs.GetFloat("wordL");
         }
 
     }
