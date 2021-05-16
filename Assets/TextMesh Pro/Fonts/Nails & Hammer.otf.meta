@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ab80973d8bd930646af525e531ac8173
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Nails & Hammer
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 91cc7bf440b71a347bf46aa33431c183, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

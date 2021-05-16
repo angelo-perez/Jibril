@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b585ccf6db7a12f4abb8ce8a1333043f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - a Avocado Taco
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a40de87a79872d447a10d706f6b09e3e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
