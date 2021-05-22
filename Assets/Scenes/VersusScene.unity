@@ -1357,6 +1357,7 @@ GameObject:
   - component: {fileID: 66337512}
   - component: {fileID: 66337514}
   - component: {fileID: 66337513}
+  - component: {fileID: 66337515}
   m_Layer: 5
   m_Name: Vines
   m_TagString: Untagged
@@ -1421,6 +1422,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66337511}
   m_CullTransparentMesh: 0
+--- !u!223 &66337515
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66337511}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &68229038
 GameObject:
   m_ObjectHideFlags: 0
@@ -14266,6 +14288,7 @@ GameObject:
   - component: {fileID: 829500029}
   - component: {fileID: 829500031}
   - component: {fileID: 829500030}
+  - component: {fileID: 829500032}
   m_Layer: 5
   m_Name: Background (1)
   m_TagString: Untagged
@@ -14330,6 +14353,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829500028}
   m_CullTransparentMesh: 0
+--- !u!223 &829500032
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829500028}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &833141433
 GameObject:
   m_ObjectHideFlags: 0
@@ -26393,6 +26437,7 @@ GameObject:
   - component: {fileID: 1497731025}
   - component: {fileID: 1497731027}
   - component: {fileID: 1497731026}
+  - component: {fileID: 1497731028}
   m_Layer: 5
   m_Name: Vines (2)
   m_TagString: Untagged
@@ -26457,6 +26502,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497731024}
   m_CullTransparentMesh: 0
+--- !u!223 &1497731028
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497731024}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &1509322903
 GameObject:
   m_ObjectHideFlags: 0
@@ -36196,6 +36262,7 @@ GameObject:
   - component: {fileID: 2125674441}
   - component: {fileID: 2125674443}
   - component: {fileID: 2125674442}
+  - component: {fileID: 2125674444}
   m_Layer: 5
   m_Name: Vines (1)
   m_TagString: Untagged
@@ -36260,6 +36327,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125674440}
   m_CullTransparentMesh: 0
+--- !u!223 &2125674444
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125674440}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 3
+  m_TargetDisplay: 0
 --- !u!1 &2126136433
 GameObject:
   m_ObjectHideFlags: 0
