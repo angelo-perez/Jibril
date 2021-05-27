@@ -1,4 +1,5 @@
 ﻿using wordList;
+//using menu;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,23 +43,20 @@ namespace _Checker
         InputField input;
         public float number;
         public List<string> wordlist;
-        int wordLength; //restriction on the length of the word. 100 means no restriction
+        [SerializeField] public int wordLength = 4; //restriction on the length of the word. 100 means no restriction
         //Etong wordLength yung need magbago-bago ng values gamit yung sa dropdown
-        float wordLength1;
 
         void Awake()
         {
             input = GameObject.Find("inputField").GetComponent<InputField>();
+            wordLength = PlayerPrefs.GetInt("wordL"); //gets the value from the dropdown in menu
             input.characterLimit = wordLength; //limits the number of character in the input field
         }
-        
 
         void Start()
         {
             startingTime1 = PlayerPrefs.GetFloat("time1");
             startingTime2 = PlayerPrefs.GetFloat("time2");
-            wordLength1 = PlayerPrefs.GetFloat("wordL");
-            wordLength = (int)wordLength1;
             number = PlayerPrefs.GetFloat("time2");
             playerIndicator.GetComponent<Text>().text = "Player 1";
             referenceWord = GetRandomWord(); // gets random word

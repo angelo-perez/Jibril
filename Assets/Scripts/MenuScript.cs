@@ -15,7 +15,7 @@ public class MenuScript : MonoBehaviour
     public float number2;
     public float number3;
     public float number4;
-    public float number5;
+    public int number5;
 
 
 
@@ -32,13 +32,13 @@ public class MenuScript : MonoBehaviour
 
 
 
-    public void SetVolume (float volume)
+    public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
         number3 = volume;
         PlayerPrefs.SetFloat("volume1", number3);
     }
-    public void Setsfx (float volume)
+    public void Setsfx(float volume)
     {
         sfx.SetFloat("vol", volume);
         number4 = volume;
@@ -91,23 +91,23 @@ public class MenuScript : MonoBehaviour
     {
         if (val == 0)
         {
-            PlayerPrefs.SetFloat("wordL", 4f);
-            number5 = PlayerPrefs.GetFloat("wordL");
+            PlayerPrefs.SetInt("wordL", 4);
+            number5 = PlayerPrefs.GetInt("wordL");
         }
         if (val == 1)
         {
-            PlayerPrefs.SetFloat("wordL", 5f);
-            number5 = PlayerPrefs.GetFloat("wordL");
+            PlayerPrefs.SetInt("wordL", 5);
+            number5 = PlayerPrefs.GetInt("wordL");
         }
         if (val == 2)
         {
-            PlayerPrefs.SetFloat("wordL", 6f);
-            number5 = PlayerPrefs.GetFloat("wordL");
+            PlayerPrefs.SetInt("wordL", 6);
+            number5 = PlayerPrefs.GetInt("wordL");
         }
         if (val == 3)
         {
-            PlayerPrefs.SetFloat("wordL", 7f);
-            number5 = PlayerPrefs.GetFloat("wordL");
+            PlayerPrefs.SetInt("wordL", 100);
+            number5 = PlayerPrefs.GetInt("wordL");
         }
 
     }
