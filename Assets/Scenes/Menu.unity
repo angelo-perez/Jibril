@@ -2192,8 +2192,8 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &88511902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9450,10 +9450,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.44
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 714062713}
+        m_TargetAssemblyTypeName: loadingdebug, Assembly-CSharp
+        m_MethodName: floatUpdate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &372745544
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16476,7 +16488,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714062711}
-  - component: {fileID: 714062712}
   - component: {fileID: 714062713}
   m_Layer: 0
   m_Name: LoadFixer
@@ -16499,20 +16510,6 @@ Transform:
   m_Father: {fileID: 95684946}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &714062712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714062710}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa7c5d00dbf5fd84a82f64b5b9e412b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 0}
-  loading: {fileID: 1038948353}
 --- !u!114 &714062713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16527,6 +16524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 714062710}
   loading: {fileID: 1038948353}
+  valueLoading: 0
 --- !u!1 &714118871
 GameObject:
   m_ObjectHideFlags: 0
@@ -22412,6 +22410,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
   loading: {fileID: 1038948353}
+  valueLoading: 0
 --- !u!21 &1011121951
 Material:
   serializedVersion: 6
@@ -23374,7 +23373,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 384452745}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -23423,6 +23422,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 95684955}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 714062710}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
 --- !u!114 &1045766224
 MonoBehaviour:
   m_ObjectHideFlags: 0
