@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -17,16 +18,22 @@ public class MenuScript : MonoBehaviour
     public float number4;
     public int number5;
 
+    public Slider volume;
+    public Slider volume1;
 
 
     void Start()
     {
-        number4 = PlayerPrefs.GetFloat("volume2");
-        number3 = PlayerPrefs.GetFloat("volume1");
+
         audioMixer.SetFloat("volume", number3);
         sfx.SetFloat("vol", number4);
-    }
+        number4 = PlayerPrefs.GetFloat("volume2");
+        number3 = PlayerPrefs.GetFloat("volume1");
 
+        volume.value = number3;
+        volume1.value = number4;
+
+    }
 
 
 
@@ -44,6 +51,13 @@ public class MenuScript : MonoBehaviour
         number4 = volume;
         PlayerPrefs.SetFloat("volume2", number4);
     }
+
+
+
+
+
+
+
     public void timer1(int val)
     {
         if (val == 0)

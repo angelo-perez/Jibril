@@ -10,6 +10,8 @@ public class loadingdebug : MonoBehaviour
 
     public GameObject loading;
 
+    public GameObject prepating;
+
     public float valueLoading;
 /*
     void Update()
@@ -25,6 +27,7 @@ public class loadingdebug : MonoBehaviour
         valueLoading = value;
         if(value == 1)
         {   
+            
             loading.SetActive(false);
             
         }

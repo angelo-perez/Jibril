@@ -43,7 +43,7 @@ namespace _Checker
         InputField input;
         public float number;
         public List<string> wordlist;
-        [SerializeField] public int wordLength = 4; //restriction on the length of the word. 100 means no restriction
+        [SerializeField] public int wordLength = 4 ; //restriction on the length of the word. 100 means no restriction
         //Etong wordLength yung need magbago-bago ng values gamit yung sa dropdown
 
         void Awake()
@@ -51,6 +51,7 @@ namespace _Checker
             input = GameObject.Find("inputField").GetComponent<InputField>();
             wordLength = PlayerPrefs.GetInt("wordL"); //gets the value from the dropdown in menu
             input.characterLimit = wordLength; //limits the number of character in the input field
+
         }
 
         void Start()

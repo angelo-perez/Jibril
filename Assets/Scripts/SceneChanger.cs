@@ -27,4 +27,8 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("GameOver");
     }
+    public void StartLoadingScene()
+    {
+        SceneManager.LoadScene("LoadingScene");
+    }
 }

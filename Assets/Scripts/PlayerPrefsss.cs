@@ -10,8 +10,9 @@ public class PlayerPrefsss : MonoBehaviour
     {
         PlayerPrefs.SetFloat("time1", 60f);
         PlayerPrefs.SetFloat("time2", 5f);
-        PlayerPrefs.SetFloat("volume2", 1f);
-        PlayerPrefs.SetFloat("volume1", 1f);
+        PlayerPrefs.SetInt("wordL", 4);
+        PlayerPrefs.GetFloat("volume2");
+        PlayerPrefs.GetFloat("volume1");
 
     }
 
