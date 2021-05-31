@@ -68,14 +68,14 @@ namespace _Checker
             counter++;
 
         }
-        private void Update()
+        /*private void Update()
         {
             if (Input.GetKey("return") && GameOverCanvas.activeSelf == false && PausePerTurn.activeSelf == false)
             {
                 StoreWord();
                 CheckWord();
             }
-        }
+        }*/
         public List<string> ReadTextFile()
         {
             string[] wordarray = WordsList.listOfWords;
