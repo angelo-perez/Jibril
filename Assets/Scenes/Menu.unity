@@ -24750,8 +24750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -54.960007, y: -0.000015258789}
-  m_SizeDelta: {x: -139.27834, y: -302.16733}
+  m_AnchoredPosition: {x: -54.960007, y: 0}
+  m_SizeDelta: {x: -139.27834, y: -339.06732}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145919565
 MonoBehaviour:
@@ -24836,7 +24836,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.46009064, y: 0, z: 0, w: 0}
+  m_margin: {x: -0.46009064, y: 1.4397225, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -33089,7 +33089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.82, y: -17}
+  m_AnchoredPosition: {x: 50.819992, y: -17.000017}
   m_SizeDelta: {x: 145.57895, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531035788
@@ -33105,7 +33105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: -1
+    m_Mode: 3
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -35626,7 +35626,7 @@ GameObject:
   - component: {fileID: 1686996482}
   - component: {fileID: 1686996483}
   m_Layer: 5
-  m_Name: Music Slider
+  m_Name: sfx slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35651,7 +35651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50.82, y: -17}
+  m_AnchoredPosition: {x: 50.819977, y: -16.799984}
   m_SizeDelta: {x: 145.57895, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686996483
@@ -39146,8 +39146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -54.960007, y: -36.9}
-  m_SizeDelta: {x: -139.27834, y: -302.16733}
+  m_AnchoredPosition: {x: -54.95999, y: -37.100006}
+  m_SizeDelta: {x: -139.27834, y: -342.6334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1839319963
 MonoBehaviour:
@@ -39532,7 +39532,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3554869552526036959, guid: 0ba72fcf11be5ac4ab4651bec86c37e9, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3554869552526036959, guid: 0ba72fcf11be5ac4ab4651bec86c37e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
